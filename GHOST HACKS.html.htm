@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GHOST SOFTER</title>
+<style>
+  /* ----------------- RGB BACKGROUND ----------------- */
+  body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, rgb(255,0,102), rgb(0,204,255), rgb(102,255,102));
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
+    color: white;
+    overflow-x: hidden;
+  }
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* ----------------- GLOW ANIMATION ----------------- */
+  @keyframes neonPulse {
+    0%, 100% {
+      text-shadow:
+        0 0 5px rgb(0,255,255),
+        0 0 10px rgb(0,255,255),
+        0 0 20px rgb(255,0,255),
+        0 0 30px rgb(255,0,255),
+        0 0 40px rgb(0,255,255);
+    }
+    50% {
+      text-shadow:
+        0 0 10px rgb(0,255,255),
+        0 0 20px rgb(0,255,255),
+        0 0 30px rgb(255,0,255),
+        0 0 40px rgb(255,0,255),
+        0 0 50px rgb(0,255,255);
+    }
+  }
+
+  /* ----------------- HEADER / NAV ----------------- */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    z-index: 10;
+  }
+  header h1 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    animation: neonPulse 2s infinite alternate;
+  }
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  nav a:hover {
+    text-shadow: 0 0 10px rgb(0,255,255), 0 0 20px rgb(255,0,255);
+  }
+
+  /* ----------------- SECTIONS ----------------- */
+  section {
+    padding: 120px 10% 80px 10%;
+    text-align: center;
+  }
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    animation: neonPulse 2.5s infinite alternate;
+  }
+  p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  /* ----------------- BUTTONS ----------------- */
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px white, 0 0 30px rgb(0,255,255);
+  }
+  .btn:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 20px rgb(255,0,255), 0 0 50px rgb(0,255,255);
+  }
+
+  /* ----------------- FOOTER ----------------- */
+  footer {
+    text-align: center;
+    padding: 40px 10px;
+    background: rgba(0,0,0,0.4);
+    box-shadow: 0 -2px 20px rgba(255,255,255,0.1);
+    font-size: 0.9rem;
+  }
+
+  /* ----------------- FLOATING DEVELOPER WIDGET ----------------- */
+  .social-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(8px);
+    border-radius: 14px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    z-index: 9999;
+    transition: all 0.3s ease;
+  }
+  .social-widget:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgb(255,0,255);
+  }
+  .social-widget a svg {
+    transition: transform 0.3s ease, fill 0.3s ease;
+  }
+  .social-widget a:hover svg {
+    transform: scale(1.2);
+    fill: rgb(0,255,255);
+  }
+  .social-widget span {
+    font-size: 13px;
+    color: white;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  @media(max-width:600px){
+    .social-widget span{display:none}
+  }
+
+  /* ----------------- BUY SOFTWARE BUTTON ICON ----------------- */
+  #buy .btn svg {
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+
+  /* ----------------- SOFTWARE LIST ----------------- */
+  #buy ul {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    text-align: left;
+    font-size: 1.1rem;
+    padding-left: 0;
+    list-style: none;
+  }
+  #buy ul li {
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px rgb(0,255,255), 0 0 10px rgb(255,0,255);
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <h1>GHOST SOFTER</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#buy">Software & Payment</a>
+  </nav>
+</header>
+
+<!-- Home Section -->
+<section id="home">
+  <h2>Welcome to GHOST SOFTER</h2>
+  <p>GHOST SOFTER is your creative technology brand focused on innovative tools, sleek design, and high-performance software solutions. We bring digital ideas to life with smooth animations, bright aesthetics, and a hint of futuristic energy.</p>
+  <a href="#about" class="btn">Learn More</a>
+</section>
+
+<!-- About Section -->
+<section id="about">
+  <h2>About Us</h2>
+  <p>We’re passionate about combining art and engineering. Our team builds intuitive interfaces, eye-catching visuals, and lightning-fast web experiences. Every project at GHOST SOFTER shines with RGB vibrancy and precision coding.</p>
+  <a href="#contact" class="btn">Get in Touch</a>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Want to collaborate or learn more about our projects? Connect with us via our socials below.</p>
+  <a href="https://instagram.com/fwhaadi1" target="_blank" class="btn">Instagram</a>
+  <a href="https://t.me/frozenx176" target="_blank" class="btn">Telegram</a>
+</section>
+
+<!-- Software & Payment Section -->
+<section id="buy">
+  <h2>Software Library & Payment</h2>
+  <p>Explore our available software tools and purchase them securely. Each tool is fully verified and supported by GHOST SOFTER.</p>
+  
+  <ul>
+    <li>Tool Alpha – Productivity Suite</li>
+    <li>Tool Beta – Design Enhancer</li>
+    <li>Tool Gamma – File Organizer</li>
+  </ul>
+
+  <a href="https://t.me/frozenx176" target="_blank" class="btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+      <path d="M12 0a12 12 0 1 0 12 12A12.013 12.013 0 0 0 12 0Zm5.517 8.338-1.826 8.606c-.137.609-.5.758-1.012.472l-2.8-2.064-1.35 1.299a.7.7 0 0 1-.557.272l.2-2.855 5.2-4.705c.226-.2-.049-.312-.35-.113l-6.416 4.043-2.764-.862c-.6-.187-.612-.6.126-.888l10.8-4.166c.5-.183.939.113.778.875Z"/>
+    </svg>
+    Contact @frozenx176 for Purchase
+  </a>
+</section>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 GHOST SOFTER. All rights reserved.
+</footer>
+
+<!-- Floating Developer Widget -->
+<div class="social-widget">
+  <a href="https://instagram.com/fwhaadi1" target="_blank" aria-label="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="white" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2m0-2A7.75 7.75 0 0 0 0 7.75v8.5A7.75 7.75 0 0 0 7.75 24h8.5A7.75 7.75 0 0 0 24 16.25v-8.5A7.75 7.75 0 0 0 16.25 0z"/><path d="M12 5.84a6.16 6.16 0 1 0 6.16 6.16A6.17 6.17 0 0 0 12 5.84m0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4m6.4-10.64a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44"/></svg>
+  </a>
+  <a href="https://t.me/frozenx176" target="_blank" aria-label="Telegram">
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="white" viewBox="0 0 24 24"><path d="M12 0a12 12 0 1 0 12 12A12.013 12.013 0 0 0 12 0Zm5.517 8.338-1.826 8.606c-.137.609-.5.758-1.012.472l-2.8-2.064-1.35 1.299a.7.7 0 0 1-.557.272l.2-2.855 5.2-4.705c.226-.2-.049-.312-.35-.113l-6.416 4.043-2.764-.862c-.6-.187-.612-.6.126-.888l10.8-4.166c.5-.183.939.113.778.875Z"/></svg>
+  </a>
+  <span>Developer<br>@fwhaadi1 | frozenx176</span>
+</div>
+
+</body>
+</html>
